@@ -1,4 +1,4 @@
-package spring.redrabbit.cloud.core.api;
+package com.redrabbit.cloud.core.api;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package spring.redrabbit.cloud.core.generator;
+package com.redrabbit.cloud.core.generator;
 
 import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.generator.config.PackageConfig;
 import com.baomidou.mybatisplus.generator.config.StrategyConfig;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import org.apache.commons.lang3.StringUtils;
-import spring.redrabbit.cloud.core.entity.BaseEntity;
+import com.redrabbit.cloud.core.entity.BaseEntity;
 
 import java.util.Scanner;
 

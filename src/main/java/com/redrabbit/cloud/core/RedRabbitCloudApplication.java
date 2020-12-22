@@ -1,11 +1,8 @@
-package spring.redrabbit.cloud.core;
+package com.redrabbit.cloud.core;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Properties;
 
 public class RedRabbitCloudApplication {

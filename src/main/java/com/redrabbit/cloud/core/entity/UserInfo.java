@@ -1,6 +1,5 @@
-package spring.redrabbit.cloud.core.entity;
+package com.redrabbit.cloud.core.entity;
 
-import spring.redrabbit.cloud.core.entity.BaseEntity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

@@ -1,6 +1,6 @@
-package spring.redrabbit.cloud.core.exec;
+package com.redrabbit.cloud.core.exec;
 
-import spring.redrabbit.cloud.core.api.ResMod;
+import com.redrabbit.cloud.core.api.ResMod;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;

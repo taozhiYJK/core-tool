@@ -1,4 +1,4 @@
-package spring.redrabbit.cloud.core.entity;
+package com.redrabbit.cloud.core.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;

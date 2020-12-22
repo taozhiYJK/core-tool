@@ -1,4 +1,4 @@
-package com.redrabbit.cloud.utils;
+package com.redrabbit.cloud.core.utils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

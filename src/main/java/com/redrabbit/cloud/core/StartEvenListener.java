@@ -1,4 +1,4 @@
-package spring.redrabbit.cloud.core;
+package com.redrabbit.cloud.core;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

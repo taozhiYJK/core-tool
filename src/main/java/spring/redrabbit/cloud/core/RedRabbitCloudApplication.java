@@ -1,4 +1,4 @@
-package core.tool;
+package spring.redrabbit.cloud.core;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;

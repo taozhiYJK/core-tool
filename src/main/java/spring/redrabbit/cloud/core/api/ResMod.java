@@ -1,4 +1,4 @@
-package core.tool.api;
+package spring.redrabbit.cloud.core.api;
 
 import java.io.Serializable;
 

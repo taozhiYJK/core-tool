@@ -23,6 +23,7 @@ public class RedRabbitCloudApplication {
         prop.setProperty("spring.cloud.nacos.discovery.server-addr", "192.168.100.110:8848");
         prop.setProperty("spring.cloud.nacos.config.server-addr", "192.168.100.110:8848");
         prop.setProperty("spring.cloud.nacos.config.file-extension", "yaml");
+        prop.setProperty("spring.cloud.nacos.config.shared-dataids", "common.yaml");
         SpringApplicationBuilder builder = new SpringApplicationBuilder(new Class[]{source});
         return builder;
     }

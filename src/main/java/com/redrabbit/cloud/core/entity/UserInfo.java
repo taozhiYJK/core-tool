@@ -35,6 +35,9 @@ public class UserInfo extends BaseEntity {
     @ApiModelProperty(value = "用户身份证号")
     private String cardId;
 
+    @ApiModelProperty(value = "用户级别")
+    private String level;
+
     @ApiModelProperty(value = "用户状态：0:正常状态,1：用户被锁定")
     private String state;
 

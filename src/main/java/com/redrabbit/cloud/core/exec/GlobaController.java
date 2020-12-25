@@ -1,17 +1,26 @@
 package com.redrabbit.cloud.core.exec;
 
 import com.redrabbit.cloud.core.api.ResMod;
+import io.jsonwebtoken.JwtException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
+@Slf4j
 public class GlobaController {
 
     @ExceptionHandler(Exception.class)
-    public ResMod exceptionhandle(Exception e) {
+    public ResMod exceptionHandle(Exception e) {
         return ResMod.fail().msg("系统错误");
+    }
+
+    @ExceptionHandler(JwtException.class)
+    public ResMod jwtExceptioHnandle(Exception e) {
+        log.info("token解析异常: {} --> {}", e.getClass().getSimpleName(), e.getMessage());
+        return ResMod.fail().msg("token错误");
     }
 
     @ExceptionHandler(HttpMessageNotReadableException.class)

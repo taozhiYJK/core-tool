@@ -1,11 +1,19 @@
 package com.redrabbit.cloud.core.api;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import java.io.Serializable;
 
+@ApiModel(description = "通用返回实体类")
 public class ResMod<T> implements Serializable {
+    @ApiModelProperty(value = "系统状态码", required = true)
     private String code;
+    @ApiModelProperty(value = "是否成功标识", required = true)
     private Boolean success;
+    @ApiModelProperty(value = "返回信息", required = true)
     private String msg;
+    @ApiModelProperty(value = "承载数据")
     private T data;
 
     public ResMod() {

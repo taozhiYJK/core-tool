@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.annotation.AliasFor;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

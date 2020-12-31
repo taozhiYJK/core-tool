@@ -8,18 +8,26 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import javax.servlet.http.HttpServletRequest;
+
 @RestControllerAdvice
 @Slf4j
 public class GlobaController {
 
     @ExceptionHandler(Exception.class)
-    public ResMod exceptionHandle(Exception e) {
+    public ResMod exceptionHandle(HttpServletRequest request, Exception e) {
+        log.error("系统错误: 请求url:{} {}--> {} --> {}", request.getMethod(), request.getServletPath(),e.getClass().getSimpleName(), e);
         return ResMod.fail().msg("系统错误");
+    }
+
+    @ExceptionHandler(ClassCastException.class)
+    public ResMod classCastExceptionHandle(HttpServletRequest request, Exception e) {
+        return ResMod.fail().msg("无效的请求路径");
     }
 
     @ExceptionHandler(JwtException.class)
     public ResMod jwtExceptioHnandle(Exception e) {
-        log.info("token解析异常: {} --> {}", e.getClass().getSimpleName(), e.getMessage());
+        log.error("token解析异常: {} --> {}", e.getClass().getSimpleName(), e.getMessage());
         return ResMod.fail().msg("token错误");
     }
 

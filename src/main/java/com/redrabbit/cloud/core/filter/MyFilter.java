@@ -25,7 +25,6 @@ public class MyFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        long start = System.currentTimeMillis();
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         RequestWapper requestWapper = new RequestWapper(request);
         filterChain.doFilter(requestWapper, servletResponse);

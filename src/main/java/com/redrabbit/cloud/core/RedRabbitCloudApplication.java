@@ -20,6 +20,7 @@ public class RedRabbitCloudApplication {
         Properties prop = System.getProperties();
         prop.setProperty("server.port", "${port:8080}");
         prop.setProperty("spring.application.name", appName);
+        prop.setProperty("mapperpackage", "com.redrabbit.cloud."+ appName.substring(appName.lastIndexOf("-") + 1) + ".mapper");
         prop.setProperty("logging.config", "classpath:logback.xml");
         prop.setProperty("spring.cloud.nacos.discovery.server-addr", "192.168.100.110:8848");
         prop.setProperty("spring.cloud.nacos.config.server-addr", "192.168.100.110:8848");

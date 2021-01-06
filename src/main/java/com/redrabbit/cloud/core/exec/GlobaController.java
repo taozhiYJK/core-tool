@@ -16,7 +16,7 @@ public class GlobaController {
 
     @ExceptionHandler(Exception.class)
     public ResMod exceptionHandle(HttpServletRequest request, Exception e) {
-        log.error("系统错误: 请求url:{} {}--> {} --> {}", request.getMethod(), request.getServletPath(),e.getClass().getSimpleName(), e);
+        log.error("系统错误: 请求url:{} {}--> {} --> {}", request.getMethod(), request.getServletPath(), e.getClass().getSimpleName(), e);
         return ResMod.fail().msg("系统错误");
     }
 
